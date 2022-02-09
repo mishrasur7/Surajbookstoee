@@ -21,6 +21,15 @@ public class Book {
 	public Book() {
 		
 	}
+	
+	public Book(Long id,String author, String title, int year, String isbn, double price) {
+		this.id= id;  
+		this.author = author;
+		this.title = title;
+		this.year = year; 
+		this.isbn = isbn; 
+		this.price = price; 
+	}
 
 	public Book(String author, String title, int year, String isbn, double price) {
 		super();
