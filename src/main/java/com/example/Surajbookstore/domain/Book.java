@@ -4,40 +4,40 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+
+import org.hibernate.annotations.ManyToAny;
 
 @Entity
 public class Book {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
-	
-	private String author; 
+
+	private String author;
 	private String title;
-	private int year; 
-	private String isbn; 
-	private double price; 
-	
+	private int year;
+	private String isbn;
+	private double price;
+
+	@ManyToOne
+	@JoinColumn(name = "categoryId")
+	private Category category;
+
 	public Book() {
-		
-	}
-	
-	public Book(Long id,String author, String title, int year, String isbn, double price) {
-		this.id= id;  
-		this.author = author;
-		this.title = title;
-		this.year = year; 
-		this.isbn = isbn; 
-		this.price = price; 
+
 	}
 
-	public Book(String author, String title, int year, String isbn, double price) {
+	public Book(String author, String title, int year, String isbn, double price, Category category) {
 		super();
 		this.author = author;
 		this.title = title;
-		this.year = year; 
-		this.isbn = isbn; 
-		this.price = price; 
+		this.year = year;
+		this.isbn = isbn;
+		this.price = price;
+		this.category = category;
 	}
 
 	public Long getId() {
@@ -88,13 +88,18 @@ public class Book {
 		this.price = price;
 	}
 
+	public Category getCategory() {
+		return category;
+	}
+
+	public void setCategory(Category category) {
+		this.category = category;
+	}
+
 	@Override
 	public String toString() {
 		return "Book [id=" + id + ", author=" + author + ", title=" + title + ", year=" + year + ", isbn=" + isbn
-				+ ", price=" + price + "]";
+				+ ", price=" + price + ", category=" + category + "]";
 	}
-
-	 
-
 
 }
