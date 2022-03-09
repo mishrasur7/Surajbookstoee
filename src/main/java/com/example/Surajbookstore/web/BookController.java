@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -46,6 +47,9 @@ public class BookController {
     
     
 	@RequestMapping(value = "/delete/{id}", method = RequestMethod.GET)
+	//Preauthorize in controller is commented because in booklist page, only admin is allowed to 
+	//view delete option
+	//@PreAuthorize("hasRole('ADMIN')")
 	public String deleteBook(@PathVariable("id") Long bookId, Model model) {
 		repository.deleteById(bookId);
 		return "redirect:../booklist";
@@ -70,6 +74,12 @@ public class BookController {
 		model.addAttribute("categories", cateRepository.findAll());
 		return "editbook";
 	}
+	
+	//login page
+	 @RequestMapping(value="/login")
+		public String login() {
+			return "login";
+		}
 	
 //	
 //	@RequestMapping(value = "edit/savebook", method = RequestMethod.POST)
