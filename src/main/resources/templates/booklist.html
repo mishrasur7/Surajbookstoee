@@ -9,7 +9,7 @@
 </head>
 <body>
 	<form th:action="@{/logout}" method="post">
-		<input class="btn btn-danger" type="submit" value="Log out" />
+		<input class="btn btn-sm btn-danger" type="submit" value="Log out" />
 	</form>
 	<h1>Books</h1>
 	<h2 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h2>
