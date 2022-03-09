@@ -30,11 +30,11 @@ public class SurajbookstoreApplication {
 			repository.save(new Book("Jukka Juslin", "Introduction to Java", 2019, "ABCDEF123", 34.99, cateRepository.findByName("Programming").get(0)));
 			repository.save(new Book("Kari Silpiö", "Data Structures and Algorithim", 2020, "ABCDWE231345", 33.99, cateRepository.findByName("Database").get(0)));
 			
-//			User user1 = new User("user", "$2a$10$7wwEIiPZWyKwrA5vt80hRu9QO50tTkWfJ5Qk9tHrQTe7SDtbLYZA.", "user@gmail.com", "USER"); 
-//			User user2 = new User("admin", "$2a$10$kHJhAaMKWzWycq/Wv2aguOTik8dweFH9zAXIB6v/tm.lcbfPrUc3m", "admin@gmail.com", "ADMIN"); 
-//			
-//			userRepository.save(user1); 
-//			userRepository.save(user2); 
+			User user1 = new User("user", "$2a$10$d6VCmTikAcE79MXG3xknl..RqiTVR9x0O6CY22CbH8sgTtHiBjEM.", "user@gmail.com", "USER"); 
+			User user2 = new User("admin", "$2a$10$62IXVK9KwfxSyusG9D0zHu86.NoYehECRTgGDBRPO2BdvRscVQBAW", "admin@gmail.com", "ADMIN"); 
+			
+			userRepository.save(user1); 
+			userRepository.save(user2); 
 		}; 
 	}
 

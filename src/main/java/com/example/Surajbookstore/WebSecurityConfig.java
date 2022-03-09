@@ -40,7 +40,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     	 .loginPage("/login")
     	 .defaultSuccessUrl("/booklist", true)
     	 .permitAll()
-    	.and()
+    	 .and()
     	 .logout()
     	 .permitAll();
     }
