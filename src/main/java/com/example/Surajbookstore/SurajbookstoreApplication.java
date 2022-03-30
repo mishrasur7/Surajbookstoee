@@ -33,8 +33,8 @@ public class SurajbookstoreApplication {
 			User user1 = new User("user", "$2a$10$d6VCmTikAcE79MXG3xknl..RqiTVR9x0O6CY22CbH8sgTtHiBjEM.", "user@gmail.com", "USER"); 
 			User user2 = new User("admin", "$2a$10$62IXVK9KwfxSyusG9D0zHu86.NoYehECRTgGDBRPO2BdvRscVQBAW", "admin@gmail.com", "ADMIN"); 
 			
-			userRepository.save(user1); 
-			userRepository.save(user2); 
+			//userRepository.save(user1); 
+			//userRepository.save(user2); 
 		}; 
 	}
 
