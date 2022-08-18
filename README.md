@@ -10,6 +10,7 @@ https://suraj-bookstore.herokuapp.com
 ## Learnings 
 - Gained basic knowledge on creating simple backend application with spring boot
 - Basic idea in creating rest apis
+- Deploying applications in heroku platform
 
 
 
