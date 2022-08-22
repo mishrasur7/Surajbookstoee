@@ -3,7 +3,7 @@
 # Application Live view 
 https://suraj-bookstore.herokuapp.com
 
-# Rest Api link
+# Rest API
 https://suraj-bookstore.herokuapp.com/books
 
 # Project structure
